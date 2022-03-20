@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Post</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./blogs.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+</head>
+
+<body>
+
+  <div style="margin-top: 0px;padding-top: 12vh;">
+    <div class="container-fluid" style="padding-right: 10vw;padding-left: 10vw;">
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col"><img class="img-fluid" src="assets/img/debsoc_logo.png" style="padding: 7.5vh;"></div>
+        <div class="col align-self-center">
+          <h1 class="text-center" style="font-size: 10vw;font-family: 'Open Sans', sans-serif;">DebSoc</h1>
+          <h4 class="text-center" style="font-size: 4vh;">Login | Debate Society of PDEU</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin: 33px;margin-top: 33px;margin-bottom: 50px;">
+
+  <div style="padding: 5vw;">
+    <div id="sawo-container" style="height: 300px; width: 90vw;"></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <hr style="margin-bottom: 30px;margin-top: 50px;">
+      <p><strong>Disclaimer:&nbsp;</strong>The blogs that this page hosts are intended to offer different views and
+        perspectives to the reader. Any views or suggestions in the blogs are not intended to hurt or tarnish any
+        religious, social, racial beliefs.
+        The objective is to inform and spread knowledge, and not to defame a particular person or a group.
+      </p>
+      <hr style="margin-bottom: 30px;margin-top: 50px;">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto">
+          <ul class="list-inline text-center" style="font-size: 25px;">
+            <!-- <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" style="margin-top: 2px;"></i></span></li> -->
+            <li class="list-inline-item"><a href="https://www.instagram.com/debsoc.pdpu/"><span
+                  class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i
+                    class="fa fa-facebook fa-stack-1x fa-inverse" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200" style="margin-top: 1px;margin-right: 0px;padding-right: 2px;"></i></span></a>
+            </li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/debsoc.pdpu/"><span
+                  class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i
+                    class="fa fa-instagram fa-stack-1x fa-inverse" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="300"></i></span></a></li>
+          </ul>
+          <p class="text-muted copyright">Copyright&nbsp;©&nbsp;DebSoc</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/bs-init.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+  <script src="assets/js/clean-blog.js"></script>
+
+  <script src="http://websdk.sawolabs.com/sawo.min.js"></script>
+  <script>
+    var config = {
+      containerID: "sawo-container",
+      identifierType: "phone_number_sms", // can be either 'email' or 'phone_number_sms'
+      apiKey: "2c5106ea-f40f-48f9-88fa-f07c989c3aba", // add your api key here
+      onSuccess: (payload) => {
+        console.log(payload);
+        location.href = "./home.html"
+      },
+    };
+    var sawo = new Sawo(config);
+    sawo.showForm();
+  </script>
+</body>
+</html>
